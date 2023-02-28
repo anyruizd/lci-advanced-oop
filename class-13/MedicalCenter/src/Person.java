@@ -1,12 +1,4 @@
 import java.time.LocalDateTime;
-
-enum GenderType {
-    FEMALE,
-    MALE,
-    NON_BINARY,
-    OTHER
-}
-
 public class Person {
     private String title;
     private String givenName;
