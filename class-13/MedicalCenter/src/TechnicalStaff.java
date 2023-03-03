@@ -11,4 +11,6 @@ public class TechnicalStaff extends Staff {
     public TechnicalStaff(String givenName, String familyName, LocalDateTime birthdate, String education, String certification, String languages) {
         super(givenName, familyName, birthdate, education, certification, languages);
     }
+
+
 }

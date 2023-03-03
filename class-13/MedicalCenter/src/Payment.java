@@ -1,4 +1,17 @@
 public abstract class Payment {
-    public abstract double salary();
-    public abstract double overtime();
+    private double wage;
+
+    public Payment(double wage) {
+        this.wage = wage;
+    }
+
+    public double getWage() {
+        return wage;
+    }
+
+    public void setWage(double wage) {
+        this.wage = wage;
+    }
+    public abstract void salary();
+    public abstract void overtime();
 }

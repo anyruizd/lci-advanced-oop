@@ -1,189 +1,106 @@
 public class Department {
 
-    private String speciality;
 
-    public Department() {
-    }
-
-    public Department(String speciality) {
-        this.speciality = speciality;
-    }
-
-    public String getSpeciality() {
-        return speciality;
-    }
-
-    private class Dermatology {
+    private class GeneralDepartment {
         private int id;
         private String name;
         private int numOfEmployees;
 
-        public Dermatology(){}
+        public GeneralDepartment(){}
 
+        public GeneralDepartment(int id, String name, int numOfEmployees) {
+            this.id = id;
+            this.name = name;
+            this.numOfEmployees = numOfEmployees;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public int getNumOfEmployees() {
+            return numOfEmployees;
+        }
+
+        public void setNumOfEmployees(int numOfEmployees) {
+            this.numOfEmployees = numOfEmployees;
+        }
+    }
+
+    public class Dermatology extends GeneralDepartment {
+        private String nameOfSpeciality;
+        // private final String nameOfSpeciality = "Dermatology";
         public Dermatology(int id, String name, int numOfEmployees) {
-            this.id = id;
-            this.name = name;
-            this.numOfEmployees = numOfEmployees;
+            super(id, name, numOfEmployees);
+            setNameOfSpeciality();
         }
 
-        public int getId() {
-            return id;
+        public String getNameOfSpeciality() {
+            return nameOfSpeciality;
         }
 
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getNumOfEmployees() {
-            return numOfEmployees;
-        }
-
-        public void setNumOfEmployees(int numOfEmployees) {
-            this.numOfEmployees = numOfEmployees;
+        public void setNameOfSpeciality() {
+            this.nameOfSpeciality = "Dermatology";
         }
     }
 
-    private class Nutrition {
-        private int id;
-        private String name;
-        private int numOfEmployees;
-
-        public Nutrition() {
+    public class Orthopedics extends GeneralDepartment {
+        private String nameOfSpeciality;
+        // private final String nameOfSpeciality = "Dermatology";
+        public Orthopedics(int id, String name, int numOfEmployees) {
+            super(id, name, numOfEmployees);
+            setNameOfSpeciality();
         }
 
-        public Nutrition(int id, String name, int numOfEmployees) {
-            this.id = id;
-            this.name = name;
-            this.numOfEmployees = numOfEmployees;
+        public String getNameOfSpeciality() {
+            return nameOfSpeciality;
         }
 
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getNumOfEmployees() {
-            return numOfEmployees;
-        }
-
-        public void setNumOfEmployees(int numOfEmployees) {
-            this.numOfEmployees = numOfEmployees;
+        public void setNameOfSpeciality() {
+            this.nameOfSpeciality = "Orthopedics";
         }
     }
 
-    private class Gynecology {
-        private int id;
-        private String name;
-        private int numOfEmployees;
-
-        public Gynecology() {
+    public class Pediatrics extends GeneralDepartment {
+        private String nameOfSpeciality;
+        // private final String nameOfSpeciality = "Dermatology";
+        public Pediatrics(int id, String name, int numOfEmployees) {
+            super(id, name, numOfEmployees);
+            setNameOfSpeciality();
         }
 
-        public Gynecology(int id, String name, int numOfEmployees) {
-            this.id = id;
-            this.name = name;
-            this.numOfEmployees = numOfEmployees;
+        public String getNameOfSpeciality() {
+            return nameOfSpeciality;
         }
 
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getNumOfEmployees() {
-            return numOfEmployees;
-        }
-
-        public void setNumOfEmployees(int numOfEmployees) {
-            this.numOfEmployees = numOfEmployees;
+        public void setNameOfSpeciality() {
+            this.nameOfSpeciality = "Pediatrics";
         }
     }
 
-    private class Endocrinology {
-        private int id;
-        private String name;
-        private int numOfEmployees;
-
-        public Endocrinology() {
-        }
-
+    public class Endocrinology extends GeneralDepartment {
+        private String nameOfSpeciality;
+        // private final String nameOfSpeciality = "Dermatology";
         public Endocrinology(int id, String name, int numOfEmployees) {
-            this.id = id;
-            this.name = name;
-            this.numOfEmployees = numOfEmployees;
+            super(id, name, numOfEmployees);
+            setNameOfSpeciality();
         }
 
-        public int getId() {
-            return id;
+        public String getNameOfSpeciality() {
+            return nameOfSpeciality;
         }
 
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getNumOfEmployees() {
-            return numOfEmployees;
-        }
-
-        public void setNumOfEmployees(int numOfEmployees) {
-            this.numOfEmployees = numOfEmployees;
+        public void setNameOfSpeciality() {
+            this.nameOfSpeciality = "Endocrinology";
         }
     }
 
-    private class InternalMedicine {
-        private int id;
-        private String name;
-        private int numOfEmployees;
-
-        public InternalMedicine() {
-        }
-
-        public InternalMedicine(int id, String name, int numOfEmployees) {
-            this.id = id;
-            this.name = name;
-            this.numOfEmployees = numOfEmployees;
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getNumOfEmployees() {
-            return numOfEmployees;
-        }
-
-        public void setNumOfEmployees(int numOfEmployees) {
-            this.numOfEmployees = numOfEmployees;
-        }
-    }
 }

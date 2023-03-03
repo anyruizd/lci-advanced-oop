@@ -1,9 +1,9 @@
-import java.time.LocalDateTime;
+import java.util.Date;
 public class Person {
     private String title;
     private String givenName;
     private String familyName;
-    private LocalDateTime birthdate;
+    private Date birthdate;
     private GenderType gender;
     private Address address;
     private String phone;
@@ -11,10 +11,20 @@ public class Person {
     public Person() {
     }
 
-    public Person(String givenName, String familyName, LocalDateTime birthdate) {
+    public Person(String givenName, String familyName, Date birthdate) {
         this.givenName = givenName;
         this.familyName = familyName;
         this.birthdate = birthdate;
+    }
+
+    public Person(String title, String givenName, String familyName, Date birthdate, GenderType gender, Address address, String phone) {
+        this.title = title;
+        this.givenName = givenName;
+        this.familyName = familyName;
+        this.birthdate = birthdate;
+        this.gender = gender;
+        this.address = address;
+        this.phone = phone;
     }
 
     public String getTitle() {
@@ -41,11 +51,11 @@ public class Person {
         this.familyName = familyName;
     }
 
-    public LocalDateTime getBirthdate() {
+    public Date getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(LocalDateTime birthdate) {
+    public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
     }
 
@@ -76,7 +86,7 @@ public class Person {
     public String toString() {
         String info = "Full name: " + this.familyName + " " + this.givenName +
                       "\nTitle: " + this.title +
-                      "\nBirthdate: " + this.birthdate.getYear() + "/" + this.birthdate.getDayOfMonth() + "/" + this.birthdate.getMonth() +
+                      "\nBirthdate: " + this.birthdate.getYear() + "/" + this.birthdate.getMonth() + "/" + this.birthdate.getDay() +
                       "\nGender: " + this.gender +
                       "\nAddress: " + this.getAddress();
 
