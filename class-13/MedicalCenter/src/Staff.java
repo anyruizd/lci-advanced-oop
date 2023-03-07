@@ -1,4 +1,4 @@
-import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Staff extends Person {
     private String education;
@@ -14,7 +14,7 @@ public class Staff extends Person {
         this.languages = languages;
     }
 
-    public Staff(String givenName, String familyName, LocalDateTime birthdate, String education, String certification, String languages) {
+    public Staff(String givenName, String familyName, Date birthdate, String education, String certification, String languages) {
         super(givenName, familyName, birthdate);
         this.education = education;
         this.certification = certification;

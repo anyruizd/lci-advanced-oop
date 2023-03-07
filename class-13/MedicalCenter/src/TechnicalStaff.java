@@ -1,4 +1,4 @@
-import java.time.LocalDateTime;
+import java.util.Date;
 
 public class TechnicalStaff extends Staff {
     public TechnicalStaff() {
@@ -8,7 +8,7 @@ public class TechnicalStaff extends Staff {
         super(education, certification, languages);
     }
 
-    public TechnicalStaff(String givenName, String familyName, LocalDateTime birthdate, String education, String certification, String languages) {
+    public TechnicalStaff(String givenName, String familyName, Date birthdate, String education, String certification, String languages) {
         super(givenName, familyName, birthdate, education, certification, languages);
     }
 
