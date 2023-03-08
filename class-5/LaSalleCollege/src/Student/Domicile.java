@@ -1,18 +1,14 @@
 package Student;
 
+import Person.*;
+
 public class Domicile extends Student {
     private String city;
 
     private String phoneNumber;
 
-    public Domicile(String name, int age, double mark, String address, String city, String phoneNumber) {
-        super(name, age, mark, address);
-        this.city = city;
-        this.phoneNumber = phoneNumber;
-    }
-
-    public Domicile(String name, double mark, String address, String city, String phoneNumber) {
-        super(name, mark, address);
+    public Domicile(String name, int age, Address address, double mark, String program, String city, String phoneNumber) {
+        super(name, age, address, mark, program);
         this.city = city;
         this.phoneNumber = phoneNumber;
     }

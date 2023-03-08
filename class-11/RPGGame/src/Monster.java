@@ -53,7 +53,7 @@ public class Monster {
     }
 
     public void attack() {
-        System.out.println(this.name + " is attacking " + this.target.name);
+        System.out.println(this.name + " having " + this.hp +  " is attacking " + this.target.name + " having " + this.target.hp);
         this.target.hp -= this.damage;
 
         if(target.isDead()) {

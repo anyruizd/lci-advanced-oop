@@ -1,17 +1,11 @@
 package Student;
-
+import Person.*;
 public class International extends Student {
     private String country;
     private double tuitionFee;
 
-    public International(String name, int age, double mark, String address, String country, double tuitionFee) {
-        super(name, age, mark, address);
-        this.country = country;
-        this.tuitionFee = tuitionFee;
-    }
-
-    public International(String name, double mark, String address, String country, double tuitionFee) {
-        super(name, mark, address);
+    public International(String name, int age, Address address, double mark, String program, String country, double tuitionFee) {
+        super(name, age, address, mark, program);
         this.country = country;
         this.tuitionFee = tuitionFee;
     }
@@ -33,7 +27,6 @@ public class International extends Student {
     }
 
     public static void main(String[] args) {
-        International i = new International("Any", 90, "1975 maisonneuve boulevard", "Colombia", 30000);
-
+        // International i = new International("Any", 90, "1975 maisonneuve boulevard", "Colombia", 30000);
     }
 }

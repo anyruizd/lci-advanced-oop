@@ -22,4 +22,13 @@ public class Account {
     public void getAccountInfo () {
         System.out.println("Your " + getAccountName() + " account was created!");
     }
+
+    public static void main(String[] args) {
+        Account instance = new Account();
+        instance.setAccountName("JM");
+        instance.getAccountInfo();
+        
+        // Account instance2 = Account.getInstance();
+        // instance2.getAccountInfo();
+    }
 }

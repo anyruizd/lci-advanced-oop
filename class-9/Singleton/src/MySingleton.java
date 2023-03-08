@@ -13,4 +13,13 @@ public class MySingleton {
         }
         return instance;
     }
+
+    public static void main(String[] args) {
+        MySingleton singleton = MySingleton.getInstance();
+        singleton.name = "John Doe";
+        System.out.println(singleton.name);
+
+        MySingleton singleton2 = MySingleton.getInstance();
+        System.out.println(singleton2.name);
+    }
 }

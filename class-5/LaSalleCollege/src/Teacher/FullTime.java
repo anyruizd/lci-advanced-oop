@@ -10,11 +10,6 @@ public class FullTime extends Teacher {
         this.department = department;
     }
 
-    public FullTime(String name, int officeNumber, String subject, int yearsOfExperience, String department) {
-        super(name, officeNumber, subject);
-        this.yearsOfExperience = yearsOfExperience;
-        this.department = department;
-    }
 
     public int getYearsOfExperience() {
         return yearsOfExperience;

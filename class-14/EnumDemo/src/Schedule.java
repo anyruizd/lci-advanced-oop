@@ -26,7 +26,7 @@ public class Schedule {
                 System.out.println("Your schedule for today is: " + Subject.JAVA + " , " + Subject.PYTHON + " and " + Subject.PHP);
             }
             default -> {
-                System.out.println("Your schedule for today is unknown");
+                System.out.println("Your schedule for " + day.toString().toLowerCase() + " is unknown");
             }
         }
     }

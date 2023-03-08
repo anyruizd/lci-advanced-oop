@@ -1,10 +1,11 @@
 public class Monster {
     private String name;
-    public int pw;
+    private IState currentState;
     private int pwMax;
+
+    public int pw;
     public int ap;
     public int luck;
-    private IState currentState;
 
     public Monster () {}
     public Monster(String name, int pw, int ap, int luck) {
@@ -60,7 +61,7 @@ public class Monster {
     }
 
     public boolean isHurt() {
-        return (currentState instanceof HurtState);
+        return (this.currentState instanceof HurtState);
     }
 
     public void attackTarget(Monster target) {

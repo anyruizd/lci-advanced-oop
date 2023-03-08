@@ -16,11 +16,22 @@ public class Student extends Person {
         this.program = program;
     }
 
+    public Student(String name, int age, Address address, String program) {
+        super(name, age, address);
+        this.program = program;
+    }
+
     public double getMark() {
         return mark;
     }
 
     public void setMark(double mark) {
         this.mark = mark;
+    }
+
+    public static void main(String[] args) {
+        Address address = new Address("4937", "King Edward Avenue", "2");
+        Student st = new Student("JM", 12, address, 2.5, "Cinema");
+        System.out.println(st.getName() + st.getAddress());
     }
 }

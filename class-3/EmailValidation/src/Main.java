@@ -5,12 +5,13 @@ import java.util.regex.Pattern;
 public class Main {
 
     public static boolean checkAt(String email) {
-        Pattern pattern = Pattern.compile("@", Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(email);
-        return matcher.find();
+        // Pattern pattern = Pattern.compile("@", Pattern.CASE_INSENSITIVE);
+        // Matcher matcher = pattern.matcher(email);
+        // return matcher.find();
+        return email.contains("@");
     }
     public static boolean checkDomainName(String email) {
-        Pattern pattern = Pattern.compile(".com", Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile(".com$", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(email);
         return matcher.find();
     }

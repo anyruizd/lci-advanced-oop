@@ -12,4 +12,10 @@ public class Animal {
             System.out.println("I am a Bear, mammal type of animal");
         }
     }
+
+    public static void main(String[] args){
+        Animal animal = new Animal();
+        Animal.Reptile cat = animal.new Reptile();
+        Animal.Mammal dog = new Animal.Mammal();
+    }
 }

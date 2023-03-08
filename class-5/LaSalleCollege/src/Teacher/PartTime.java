@@ -10,12 +10,6 @@ public class PartTime extends Teacher {
         this.phoneNumber = phoneNumber;
     }
 
-    public PartTime(String name, int officeNumber, String subject, String email, String phoneNumber) {
-        super(name, officeNumber, subject);
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-    }
-
     public String getEmail() {
         return email;
     }

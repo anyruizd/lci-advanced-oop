@@ -1,5 +1,5 @@
 public class MyAbstractExample extends MyAbstract {
-    // no it asks me to implement the methods I declared in the other class
+    // now it asks me to implement the methods I declared in the other class
 
     public int getNumber(int a, int b) {
         return a * b;

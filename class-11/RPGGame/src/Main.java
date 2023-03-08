@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Monster golbin = new Monster("Golbin", 25, 100);
-        Monster orge = new Monster("Orge", 35, 80);
+        Monster golbin = new Monster("Golbin", 55, 10);
+        Monster orge = new Monster("Orge", 55, 10);
 
         Battle myBattle = new Battle();
-        myBattle.battle(golbin, orge);
+        myBattle.battle(orge, golbin);
     }
 }

@@ -27,7 +27,7 @@ public class Car extends Vehicle {
 
         System.out.println(c2.getModel()); // I have access to this property via the encapsulation
         c.color = "Black";
-        System.out.println(c.getColor());
+        System.out.println(c.color);
 
     }
 }
