@@ -6,14 +6,19 @@ public class MySingleton {
     public String name = "";
     // private constructor
     private MySingleton() {}
-
+    // when i load the class into memory all the static variables that have an initial value, 
+    // are called and initialized -> eager approach or eager initialization asap initialiation
+    // private static instance = new Singleton();
     public static MySingleton getInstance() {
         if(instance == null) { // we check if it already exists in heap memory, its useful to create DB connections
-            instance = new MySingleton(); // i already initialized instance at the top
+            // If i create the instance when i call the getInstance, it's called lazy singleton
+            // this does the initialization as late as possible
+            instance = new MySingleton(); // i already declared instance at the top
         }
         return instance;
     }
 
+    
     public static void main(String[] args) {
         MySingleton singleton = MySingleton.getInstance();
         singleton.name = "John Doe";
