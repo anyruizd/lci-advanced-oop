@@ -5,8 +5,10 @@ public class User {
     private String name;
     private String email;
     private Address address;
+    static int idCounter = 0;
 
     public User() {
+        this.id = idCounter++;
     }
 
     public User(int id, String name, String email, Address address) {
@@ -15,6 +17,13 @@ public class User {
         this.email = email;
         // TODO: How to add address to user in the database
         this.address = address;
+
+    }
+
+    public User(String name, String email) {
+        this.name = name;
+        this.email = email;
+        this.id = idCounter++;
     }
 
     public int getId() {
